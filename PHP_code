@@ -1,0 +1,37 @@
+<?php
+
+// Интерфейс для сервиса пользователей
+interface UserServiceInterface {
+    public function registerUser($userData);
+    public function loginUser($email, $password);
+    public function getUserById($userId);
+}
+
+// Интерфейс для сервиса товаров
+interface ProductServiceInterface {
+    public function getProductById($productId);
+    public function searchProducts($searchTerm);
+    public function createProduct($productData);
+    public function updateProduct($productId, $productData);
+}
+
+// Интерфейс для сервиса заказов
+interface OrderServiceInterface {
+    public function createOrder($orderData);
+    public function getOrderById($orderId);
+    public function updateOrderStatus($orderId, $status);
+}
+
+class UserService implements UserServiceInterface {
+    // Реализация методов
+}
+
+class ProductService implements ProductServiceInterface {
+    // Реализация методов
+}
+
+class OrderService implements OrderServiceInterface {
+    // Реализация методов
+}
+
+?>
